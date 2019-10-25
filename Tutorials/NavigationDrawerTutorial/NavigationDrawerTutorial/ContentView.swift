@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  SideMenuTutorial
+//  NavigationDrawerTutorial
 //
-//  Created by Duy Bui on 10/24/19.
+//  Created by Duy Bui on 10/25/19.
 //  Copyright © 2019 Duy Bui. All rights reserved.
 //
 
