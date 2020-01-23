@@ -41,9 +41,7 @@ struct ContentView: View {
                     EmptyView()
                         .navigationBarTitle(Text("Navigation Drawer"))
                         .navigationBarItems(leading: Button(action: {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                 self.isDrawerOpen.toggle()
-                            }
                         }) {
                             Image(systemName: "sidebar.left")
                         })
