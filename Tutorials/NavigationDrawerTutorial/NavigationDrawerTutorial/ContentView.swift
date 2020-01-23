@@ -36,17 +36,16 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            if !self.isDrawerOpen {
-                NavigationView {
-                    EmptyView()
-                        .navigationBarTitle(Text("Navigation Drawer"))
-                        .navigationBarItems(leading: Button(action: {
-                                self.isDrawerOpen.toggle()
-                        }) {
-                            Image(systemName: "sidebar.left")
-                        })
-                }
+            NavigationView {
+                EmptyView()
+                    .navigationBarTitle(Text("Navigation Drawer"))
+                    .navigationBarItems(leading: Button(action: {
+                        self.isDrawerOpen.toggle()
+                    }) {
+                        Image(systemName: "sidebar.left")
+                    })
             }
+            
             NavigationDrawer(isOpen: self.$isDrawerOpen)
         }
     }
