@@ -16,7 +16,7 @@ struct DrawerContent: View {
 
 struct NavigationDrawer: View {
     private let width = UIScreen.main.bounds.width - 100
-    let isOpen: Bool
+    @Binding var isOpen: Bool
     
     var body: some View {
         HStack {
@@ -25,6 +25,8 @@ struct NavigationDrawer: View {
                 .offset(x: self.isOpen ? 0 : -self.width)
                 .animation(.default)
             Spacer()
+        }.onTapGesture {
+            self.isOpen.toggle()
         }
     }
 }
@@ -34,25 +36,17 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            if !self.isDrawerOpen {
-                NavigationView {
-                    EmptyView()
-                        .navigationBarTitle(Text("Navigation Drawer"))
-                        .navigationBarItems(leading: Button(action: {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                self.isDrawerOpen.toggle()
-                            }
-                        }) {
-                            Image(systemName: "sidebar.left")
-                        })
-                }
+            NavigationView {
+                EmptyView()
+                    .navigationBarTitle(Text("Navigation Drawer"))
+                    .navigationBarItems(leading: Button(action: {
+                        self.isDrawerOpen.toggle()
+                    }) {
+                        Image(systemName: "sidebar.left")
+                    })
             }
-            NavigationDrawer(isOpen: self.isDrawerOpen)
-        }.background(Color.white)
-        .onTapGesture {
-            if self.isDrawerOpen {
-                self.isDrawerOpen.toggle()
-            }
+            
+            NavigationDrawer(isOpen: self.$isDrawerOpen)
         }
     }
 }
