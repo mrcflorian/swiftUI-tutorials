@@ -14,7 +14,7 @@ struct HorizontalProgressBarView: View {
     let height: CGFloat
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .leading) {
             Rectangle()
                 .fill(Color.gray)
             Rectangle()
