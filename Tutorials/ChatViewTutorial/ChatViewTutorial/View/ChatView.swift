@@ -48,7 +48,7 @@ struct ChatView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
         ChatView()
     }
