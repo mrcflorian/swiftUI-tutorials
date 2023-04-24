@@ -1,1 +1,0 @@
-TheHorizontalProgressBarView.xcodeproj
