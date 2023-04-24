@@ -1,0 +1,11 @@
+<!-- docs/_sidebar.md -->
+- [Home](/)
+- [CameraAndGalleryTutorial](devassistDocs/docs/Tutorials/CameraAndGalleryTutorial/)
+- [ChatViewTutorial](devassistDocs/docs/Tutorials/ChatViewTutorial/)
+- [FirebaseCloudStorageInSwiftUI](devassistDocs/docs/Tutorials/FirebaseCloudStorageInSwiftUI/)
+- [LoginScreenTutorial](devassistDocs/docs/Tutorials/LoginScreenTutorial/)
+- [MapViewTutorial](devassistDocs/docs/Tutorials/MapViewTutorial/)
+- [NavigationDrawerTutorial](devassistDocs/docs/Tutorials/NavigationDrawerTutorial/)
+- [SwiftUICombineMVVM](devassistDocs/docs/Tutorials/SwiftUICombineMVVM/)
+- [TabbedViewTutorial](devassistDocs/docs/Tutorials/TabbedViewTutorial/)
+- [TheHorizontalProgressBarTutorial](devassistDocs/docs/Tutorials/TheHorizontalProgressBarTutorial/)

@@ -1,19 +1,18 @@
 # Coordinator
 
 ## Overview
-The Coordinator class is used to handle the picker view of UIImagePickerController when the user is selecting an image from the camera or photo library.
+The Coordinator class is a SwiftUI class that is used to bridge the gap between the UIKit framework and SwiftUI. It is used to get an image from the user's photo library or camera.
 
 ## Props
-- `isCoordinatorShown`: A binding variable to indicate if the picker view is shown.
-- `imageInCoordinator`: A binding variable to store the selected image.
+- `isCoordinatorShown`: A binding of type Bool that is used to determine if the Coordinator is shown or not.
+- `imageInCoordinator`: A binding of type Image? that is used to store the image that is selected from the user's photo library or camera.
 
 ## Variables
-- `picker`: A UIImagePickerController object to display the picker view.
+None
 
 ## Methods
-- `imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])`: This method is called when the user has finished selecting an image. It unwraps the image from the info dictionary and stores it in the `imageInCoordinator` variable. It also sets `isCoordinatorShown` to false to hide the picker view.
-
-- `imagePickerControllerDidCancel(_ picker: UIImagePickerController)`: This method is called when the user has cancelled the selection. It sets `isCoordinatorShown` to false to hide the picker view.
+- `imagePickerController(_:didFinishPickingMediaWithInfo:)`: This method is used to get the image from the user's photo library or camera and store it in the `imageInCoordinator` variable.
+- `imagePickerControllerDidCancel(_:)`: This method is used to dismiss the Coordinator when the user cancels the selection.
 
 ## Usage
-The Coordinator class is used in the ContentView class of the CameraAndGalleryTutorial project. An instance of Coordinator is created and passed to the sheet view as a coordinator. The sheet view is then shown when the user taps on the camera or photo library buttons. When the user has finished selecting an image or cancelled the selection, the Coordinator's methods are called.
+To use the Coordinator, it must be initialized with the bindings `isCoordinatorShown` and `imageInCoordinator`, and then it can be used to get the image from the user's photo library or camera.
