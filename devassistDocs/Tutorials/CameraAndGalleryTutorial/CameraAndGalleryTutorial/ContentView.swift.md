@@ -1,17 +1,19 @@
-# ContentView
+# CameraAndGallery Tutorial 
 
 ## Overview
-ContentView is a SwiftUI view that allows users to select an image from their device's photo library or take a photo with the device's camera. The view is composed of a button that, when pressed, presents a CaptureImageView which handles the photo selection. 
+This tutorial will demonstrate how to use SwiftUI to create a simple app that allows users to access their camera or image gallery to take pictures and save them. 
 
 ## Props
-- `image`: Image? - The image that the user has selected from their photo library or taken with their device's camera
-- `showCaptureImageView`: Bool - Whether or not the CaptureImageView should be visible
+- `isShown` is a `Binding` that is used to determine if the camera and gallery view should be shown. 
+- `image` is a `Binding` that holds the image that was selected by the user. 
 
 ## Variables
-None
+- `picker` is an `UIImagePickerController` which is used to select an image from the camera or image gallery. 
 
 ## Methods
-None
+- `makeCoordinator` is used to create a new `Coordinator` object. This is used to handle the image selection. 
+- `makeUIViewController` is used to create and configure the `UIImagePickerController`. 
+- `updateUIViewController` is used to update the `UIImagePickerController` when the view changes. 
 
 ## Usage
-ContentView can be used in any SwiftUI view as a way to allow users to select or take a photo. To do this, simply add ContentView as a subview in the desired view.
+To use this tutorial, create a new SwiftUI project and add the `CaptureImageView` struct to the `ContentView`. Then, add a `Button` to the `ContentView` to trigger the camera and gallery view and a `Image` to display the selected image. Finally, bind the `isShown` and `image` props to the view's state.

@@ -1,24 +1,24 @@
 # AppDelegate
 
 ## Overview
-This class is the App Delegate for the Camera and Gallery Tutorial application. It is responsible for handling the application lifecycle and responding to application state transitions. 
+AppDelegate is a class that handles the application's life cycle events. It is a subclass of `UIResponder` and conforms to the `UIApplicationDelegate` protocol. 
 
 ## Props
-None
+None 
 
 ## Variables
 None
 
-## Methods
+## Methods 
 
-### Application(_:didFinishLaunchingWithOptions:)
-This method is called when the application finishes launching. It is responsible for performing any necessary setup and configuration required for the application to run. 
+### application(_:didFinishLaunchingWithOptions:)
+This method is called when the application has finished launching. This is a great place to do any initial setup. 
 
-### Application(_:configurationForConnecting:options:)
-This method is called when a new scene session is being created. It is responsible for selecting the configuration to create the new scene with.
+### application(_:configurationForConnecting:options:)
+This method is called when a new scene session is being created. Use this method to select a configuration to create the new scene with.
 
-### Application(_:didDiscardSceneSessions:)
-This method is called when the user discards a scene session. It is responsible for releasing any resources that were specific to the discarded scenes.
+### application(_:didDiscardSceneSessions:)
+This method is called when the user discards a scene session. Use this method to release any resources that were specific to the discarded scenes. 
 
 ## Usage
-This class should not be used directly. It should be set as the App Delegate in the application's Info.plist file.
+The AppDelegate should not be used directly, but is used by the system to handle application life cycle events.

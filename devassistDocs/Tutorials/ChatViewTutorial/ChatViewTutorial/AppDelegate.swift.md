@@ -1,24 +1,24 @@
-# AppDelegate.swift
+# AppDelegate
 
 ## Overview
-This AppDelegate.swift file contains the code for the app's main delegate. This includes the functions used to launch the app when it is opened, as well as functions that manage the lifecycle of the app's scenes. 
+AppDelegate is the main entry point of the application. It is responsible for managing the life cycle of the application. It handles events such as application launch, background execution, termination, and more.
 
 ## Props
-No props are used in this file.
+None
 
 ## Variables
-No variables are used in this file.
+None
 
 ## Methods
 
-#### application(_:didFinishLaunchingWithOptions:) 
-This method is called when the app launches. It is used for any customization that needs to be done after the app is launched.
+### application:didFinishLaunchingWithOptions
+This method is called when the application has finished launching. It is responsible for setting up the application and returning true if the launch was successful.
 
-#### application(_:configurationForConnecting:options:)
-This method is called when a new scene session is being created. It is used to select a configuration to create the new scene with.
+### application:configurationForConnecting
+This method is called when a new scene session is being created. It is responsible for returning the configuration for the new scene.
 
-#### application(_:didDiscardSceneSessions:)
-This method is called when the user discards a scene session. It is used to release any resources that were specific to the discarded scenes. 
+### application:didDiscardSceneSessions
+This method is called when the user discards a scene session. It is responsible for releasing any resources that were specific to the discarded scene.
 
 ## Usage
-The AppDelegate.swift file should not be modified manually. All modifications should be done through the project's settings.
+The AppDelegate should be used to handle the application life cycle events. It is responsible for setting up the application and releasing resources when necessary.
